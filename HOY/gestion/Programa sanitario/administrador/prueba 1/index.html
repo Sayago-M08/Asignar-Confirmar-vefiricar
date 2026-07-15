@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <nav class="navegador">
+        <ul class="lista">
+            <a href="">
+            <li class="elementos ">
+                <img src="./img/la-matanza-seeklogo.png" class="logo" style="height: 40px; width: 40px;">
+                <div class="contenido">
+                    <h2>La matanza</h2>
+                </div>
+            </li>
+            </a>
+            <a href="">
+            <li class="elementos">
+                <i class="bi bi-house"></i>
+
+                <div class="contenido">
+                    <p class="elemento-texto">Inicio</p>
+                </div>
+            </li>
+            </a>
+            <a href="">
+            <li class="elementos">
+                <i class="bi bi-0-circle"></i>
+
+                <div class="contenido">
+                    <p class="elemento-texto">administrador</p>
+                </div>
+            </li>
+            </a>
+            <a href="promotoras.html">
+            <li class="elementos ">
+                <i  class="bi bi-file-earmark-person"></i>
+
+                <div class="contenido">
+                    <p class="elemento-texto">Promotoras
+                </div>
+            </li>
+            </a>
+
+            <a href="calendario.html">
+            <li class="elementos">
+                <i class="bi bi-calendar2-week"></i>
+
+                <div class="contenido">
+                    <p class="elemento-texto">calendario</p>
+                </div>
+            </li>
+            </a>
+            <li class="elementos">
+                    <img src="./img/WhatsApp Image 2026-03-17 at 17.21.47.jpg" alt="" style="height: 40px;width: 40px;border-radius: 100%; background: linear-gradient(to top, rgb(15, 15, 250),rgba(0,0,0,0.5));" class="logo">
+                    <div class="contenido">
+                    <p class="elemento-texto">Mateo </p>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main class="conexion">
+        <div class="contenedor">
+            <h2>Conexion a la base de datos</h2>
+        </div>
+
+        <!-- <div class="fecha-presente">
+
+            <div class="fecha-estadisticas">
+                <h2>Fecha actual
+                    <br>
+                    11/06/2026
+                </h2>
+            </div> 
+
+             <div class="promotoras-estadisticas">
+            <h2>
+            Convocadas hoy 3
+            </h2>
+            </div>
+
+            <div class="presente-estadisticas">
+            <h2>
+                presenten hoy 2/3
+            </h2>
+            </div> -->
+
+            <div class="prom-cargada">
+            <h1>Promotoras que deben asistir hoy</h1>
+            </div>
+            <div class="promotoras-cargadas">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DNI</th>
+                            <th>nombre</th>
+                            <th>Apellido</th>
+                            <th>Barrio</th>
+                            <th>localidad</th>
+                            <th>direccion</th>
+                            <th>presente</th>
+                            <th class="permitir">permitir</th>
+                            <th class="denegar">denegar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>48574837</td>
+                            <td>Mateo</td>
+                            <td>Sayago</td>
+                            <td>Villa dorrego</td>
+                            <td>gonzalez catan</td>
+                            <td>carola lorenzini</td>
+                            <td>Presente/ausente</td>
+                            <td class="check"><i class="bi bi-check"></i></td>
+                            <td class="negar"><i class="bi bi-x-lg"></i></td>
+                        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="prom-cargada">
+            <h1>Grupos que debe de asistir hoy</h1>
+            </div>
+            <div class="promotoras-cargadas">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre del grupo</th>
+                            <th>Tarea</th>
+                            <th>Dias asignados</th>
+                            <th>Lugar</th>
+                            <th>Promotoras</th>
+                            <th>Numero de Equipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>Equipo vacunas</td>
+                            <td>Realizar la administracion de las vacunas</td>
+                            <td>Lunes, Miercoles, viernes</td>
+                            <td>Plaza san justo</td>
+                            <td>Mateo</td>
+                            <td>4</td>
+                        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+    </main>
+    
+
+    <!-- <nav class="navegador">
+        <div class="nav-logo">
+            <h2>la matanza</h2>
+        </div>
+        <div class="nav-lista">
+            <div class="perfil-administrador">
+                    <img src="" alt="">
+                    <h2>Mateo</h2>
+            </div>
+            <a href=""> <i class="bi bi-house"></i>Inico</a>
+            <a href=""><i class="bi bi-0-circle"></i> administrador</a>
+            <a href=""><i class="bi bi-file-earmark-person"></i> promotoras</a>
+            <a href=""><i class="bi bi-calendar2-week"></i>calendario</a>
+        </div>
+    </nav> -->
+
+
+
+
+
+
+
+
+    <!-- <nav>
+        <div class="nav-logo">
+            <h2>La matanza</h2>
+        </div>
+        <div class="nav-link">
+            <ul>
+
+                <img src="" alt="">
+                <li><a href="#">Mateo</a></li>
+                
+                <i class="bi bi-house"></i>
+                <li><a href="#">Inicio</a></li>
+
+                <i class="bi bi-file-earmark-person"></i>
+                <li><a href="#"></i>ver promotoras</a></li>
+
+                <i class="bi bi-calendar2-week"></i>
+                <li><a href="#"></i>calendario</a></li>
+
+                <i class="bi bi-0-circle"></i>
+                <li><a href="#">administradores</a></li>
+
+            </ul>
+        </div>
+    </nav> -->
+    <!-- <main class="cargas-promotoras">
+        <div class="medio">
+            <h2>Promotoras cargadas</h2>
+        </div>
+    </main> -->
+    <!-- <header>
+        <div class="promotoras">
+            <p class="perfil"><i class="bi bi-file-earmark-person"></i> </p>
+            <h3>nombre: Mateo</h3>
+            <h3>apellido:sayago</h3>
+            <h3>dni: 48374837</h3>
+            <h3>presente: no</h3>
+            <h2 class="calendario"><a href="#"><i class="bi bi-calendar-week"></i></a></h2>    
+            <div class="botones">
+                <button class="boton-tareas"><a href="#">Asignar tareas</a></button>
+                <button class="boton-datos"><a href="#">Ver datos</a></button>
+            </div>
+        </div>
+    </header> -->
+</body>
+</html>

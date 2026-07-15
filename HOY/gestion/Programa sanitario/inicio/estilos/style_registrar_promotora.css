@@ -1,0 +1,82 @@
+body{
+    height: 100vh;  
+    height: 100%;
+    background: radial-gradient( circle,rgb(2, 32, 88),rgba(155, 80, 9, 0.363), rgb(2, 32, 88));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-registrar{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(236, 199, 164, 0.473);
+    width: 350px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 500px rgba(155, 80, 9, 0.4);
+}
+.form-registrar form{
+    margin: 20px;
+}
+.form-registrar h2{
+    font-size: 30px;
+    margin: 20px;
+}
+.form-registrar form label{
+    font-size: 20px;
+}
+.form-registrar form input{
+    margin-top: 13px;
+    border-radius: 7px;
+    text-align: center;
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(50px);
+    box-shadow: 5px 5px 10px black;
+    transition: all 1000ms ease;
+    color: aliceblue;
+}
+.form-registrar form input:hover{   
+    box-shadow: -5px 5px 10px black;
+}
+::placeholder{
+    color: aliceblue;
+}
+
+.btn-registrar{
+    background: transparent;
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.39);
+    transition: all 1000ms ease-out;
+    transform: translateY(0);
+    box-shadow: 0 0 10px black;
+}
+.btn-registrar:hover{
+    cursor: pointer;
+    background-color: rgba(240, 248, 255, 0.2);
+    transform: translateY(-3px);
+}
+.msj{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    height: 70px;
+    width: 300px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    padding: 5px;
+    box-shadow: 0 0 10px black;
+}
+.msj_error{
+color: rgba(248, 132, 132, 0.815);
+}

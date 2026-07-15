@@ -1,0 +1,35 @@
+<?php
+require_once __DIR__ . '/../config/db.php';
+$hoy = date('Y-m-d'); // Fecha actual
+
+// 1. Consulta para todas las promotoras citadas hoy
+$sql_promotoras = "SELECT DISTINCT p.dni_promotoras, p.nombre_completo, p.domiciolio
+                   FROM promotoras p
+                   JOIN grupos_promotoras gp ON p.dni_promotoras = gp.dni_promotoras
+                   JOIN grupos g ON gp.id_grupos = g.id_grupos
+                   WHERE g.fecha = '$hoy'";
+
+$res_promotoras = $conn->query($sql_promotoras);
+
+// 2. Consulta para los grupos y sus promotoras (agrupadas)
+$sql_grupos = "SELECT 
+                g.id_grupos, 
+                g.numero_grupo, 
+                g.nombre_grupo, 
+                l.lugar, 
+                t.tareas, 
+                o.opearativos,
+                GROUP_CONCAT(p.nombre_completo SEPARATOR ', ') AS lista_promotoras
+               FROM grupos g
+               JOIN lugar l ON g.id_lugar = l.id_lugar
+               JOIN tareas t ON g.id_tareas = t.id_tareas
+               JOIN operaivos o ON g.id_operativo = o.id_operativos
+               JOIN grupos_promotoras gp ON g.id_grupos = gp.id_grupos
+               JOIN promotoras p ON gp.dni_promotoras = p.dni_promotoras
+               WHERE g.fecha = '$hoy'
+               GROUP BY g.id_grupos, g.numero_grupo, g.nombre_grupo, l.lugar, t.tareas, o.opearativos";
+
+$res_grupos = $conn->query($sql_grupos);
+
+// A partir de aquí, tu compañero puede recorrer $res_promotoras y $res_grupos
+?>
