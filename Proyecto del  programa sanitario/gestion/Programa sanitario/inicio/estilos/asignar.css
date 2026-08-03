@@ -1,0 +1,140 @@
+ body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at 50% 100%,rgb(2, 32, 88),rgba(155, 80, 9, 0.349)70%, rgb(2, 32, 88));
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns:250px 1fr;    
+    color: #ccc;
+
+}
+form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.input-principal{
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);    
+    border-radius: 20px;
+    padding: 20px;
+    color: #ffffff;
+}
+input{
+    padding: 12px;
+    width: 300px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    margin-bottom: 10px;
+        box-shadow: -3px -3px 5px rgba(226, 226, 226, 0.589),
+                5px 5px 10px black,
+    inset 0 0 10px gray;
+    transition: all 1000ms ease;
+}
+input::placeholder{
+    color: black;
+    font-size: 1rem;
+}
+input:focus{
+    outline: none;
+    color: black;
+            box-shadow:
+            inset 0 0 30px gray;
+}
+.boton{
+        display: flex;
+    justify-content: center;
+}
+.btn-agregar{
+    margin-top: 10px; 
+    padding: 15px 15px;
+    font-size: 17px;
+    cursor: pointer; 
+    background-color: #03094298;
+    color: rgb(255, 255, 255); 
+    border: none;
+    border-radius: 20px;
+    transition: all 1000ms ease;
+}
+.btn-agregar:hover{
+    transform: scale(1.1);
+}
+.contenedor-fecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(2, 32, 88, 0.123);
+    padding: 10px;
+    border-radius: 20px;
+    color: aliceblue;
+    margin-bottom: 10px;
+    grid-column: span 2;
+}
+.contenedor-fecha input:focus{
+    border: none;
+    outline: none;
+    border: 4px solid gray;
+}
+.fecha-inicio{
+    color: rgb(247, 247, 247);
+}
+
+
+/* segundo input */
+.contenedor-secundario{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+
+
+.segundos-input{
+    width: 700px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.bloque-asignacion{
+    background-color: rgb(2, 32, 88);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.bloque-asignacion h3{
+    font-size: 2rem;
+}
+.btn-enviar{
+    display: flex;
+    justify-content: center;
+}
+.enviar{
+    background-color: #03094298;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    transition: all 1000ms ease;
+    box-shadow: 1px 1px 10px rgba(235, 232, 232, 0.356);
+    border: none;
+}
+.enviar:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* Estilos del formulario */
+.formulario-grupo {
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}

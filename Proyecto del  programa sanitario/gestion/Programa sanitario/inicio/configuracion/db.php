@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";       // Usuario por defecto de XAMPP
 $password = "";       // Contraseña por defecto de XAMPP (vacía)
-$database = "gestion"; // El nombre exacto de tu base de datos
+$database = "gestionn"; // El nombre exacto de tu base de datos
 
 // Crear la conexión
 $conn = new mysqli($host, $user, $password, $database);

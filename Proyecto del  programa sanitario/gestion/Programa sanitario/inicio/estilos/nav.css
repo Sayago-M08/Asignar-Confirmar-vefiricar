@@ -6,12 +6,11 @@
     margin-right: 200px;
     border-bottom-right-radius: 170px;
     padding-top: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 28px;
+    padding-right: 28px;
     position: sticky;
     top: 0px;
 }
-
 .navegador:hover .elementos{
     grid-template-columns: 40px 1fr;
     color: aliceblue;
@@ -21,7 +20,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
 }
 .lista a{
     text-decoration: none;
@@ -32,7 +31,7 @@
   font-weight: bold;
 }
 .elementos {
-    padding: .8rem 1.3rem ;
+    padding:  5px ;
     border-radius: 10px;
     display: grid;
     justify-content: center;
@@ -57,13 +56,15 @@ margin-bottom: 10px;
 }
 
 .elementos i{
-    font-size: 20px;
+    font-size: 2rem;
     overflow: hidden;
     justify-self: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-
+.elementos img{
+    margin-top: 10px;
+}
 .contenido,.elemento-texto{
     padding-left: 10px;
 }

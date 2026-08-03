@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
@@ -6,87 +8,16 @@ body{
     background: radial-gradient(circle at 50% 100%,rgb(2, 32, 88),rgba(155, 80, 9, 0.349)70%, rgb(2, 32, 88));
     background-repeat: no-repeat;
     display: grid;
-    grid-template-columns:400px 1fr;
+    grid-template-columns:250px 1fr;    
 
 }
-.navegador{
-    background-color: rgb(2, 32, 88);
-    width: max-content;
-    text-wrap: nowrap;
-    height: 100vh;
-    margin-right: 200px;
-    border-bottom-right-radius: 170px;
-    padding-top: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    position: sticky;
-    top: 0px;
-}
-
-.navegador:hover .elementos{
-    grid-template-columns: 40px 1fr;
-    color: aliceblue;
-}
-.lista{
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.lista a{
-    text-decoration: none;
-}
-.contenido h2{
-    
-    font-size: 1.2rem;
-  font-weight: bold;
-}
-.elementos {
-    padding: .8rem 1.3rem ;
-    border-radius: 10px;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 40px 0fr;
-    color: rgba(255, 255, 255, 0.61);
-    transition: all 0.8s ease;
-}
-.elementos:not(:has(.logo)):hover{
-background-color: rgb(11, 102, 155);
-color: aliceblue;
-fill: aliceblue;
-cursor: pointer;
-}
-
-.elementos:has(.logo){
-margin-bottom: 10px;
-}
-
-.contenido{
-    overflow: hidden ;
-    
-}
-
-.elementos i{
-    font-size: 20px;
-    overflow: hidden;
-    justify-self: center;
-    margin-top: 20px;
-}
-
-
-.contenido,.elemento-texto{
-    padding-left: 10px;
-}
-
-.elemento-texto{
-    font-size: 20px;
-    color: white;
-}
-
 /* conexion a la bd */
 .conexion{
-margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
 }
 
 .contenedor{
@@ -287,34 +218,8 @@ margin-right: auto;
     cursor: pointer;
 }
 
-      
-/* estadisticas */
 
-.estadisticas{
-   
-    display: flex;
-    padding-right: 20px;
-    justify-content: center;
-padding: 50px;
-    width: 1000px;
-}   
-.primer-estadisticas, .segunda-estadisticas, .tercera-estadisticas {
-    background-color: rgba(240, 248, 255, 0.418);
-    border-radius: 15px;
-    display: flex;
-    height: auto;
-    padding: 10px;
-    align-items: center;
-    
-}
-.contenido-estadisticas{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-/* /* tabla con el contenido */
+/* tabla con el contenido */
 
 .prom-cargada{
     width: 1000px;
@@ -345,6 +250,10 @@ padding: 50px;
     transition: all 1000ms ease;
     border: none;
     box-shadow: 0  0 5px black;
+}
+.agregar a{
+    color: white;
+    text-decoration: none;
 }
 .agregar:hover{
     background-color: rgb(51, 212, 51);
@@ -406,18 +315,28 @@ td i{
 }
 /* promotoras */
 .promotoras{
-    padding: 30px;
+    width: 1000px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
     gap: 20px;
     overflow: auto;
+    scroll-behavior: smooth;
     height: 500px;
+    border: 4px solid gray;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 .promotoras::-webkit-scrollbar{
     display: none;
 }
 .promotoras-datos{
     text-align: center;
+    width: 300px;
+    height: auto;
     background: transparent;
     backdrop-filter: blur(50px);
     color: rgba(255, 255, 255, 0.76);
@@ -464,8 +383,66 @@ td i{
     background-color: red;
     box-shadow: 2px 2px 20px 2px rgba(185, 63, 63, 0.774);
 }
-
+.confirmar{
+    background-color: #ff2600a2;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    transition: all 1000ms ease;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.349);
+}
+/* buscador de las promotoras */
+.buscador{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.buscador form input{
+    margin: 0;     
+    padding: 20px;
+    font-size: 30px; 
+    box-sizing: border-box;
+    outline:none;
+    transition: all 1000ms ease;
+}
+.buscador .boton{
+    border: 2px solid gray;
+    border-left: none;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    color: #ffffff;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+}
+.buscador .texto{
+    border: 2px solid gray;
+    border-right: none;
+    border-radius: 20px 0 0 0; 
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px black;
+}
+.buscador .texto::placeholder{
+    color: white;
+    text-align: center;
+}
+.buscador input:focus{
+    background-color: #706666;
+    color: #ffffff;
+}
+.form-input{
+    display: flex;
+    gap: 0;
+}
 /* grupo de promotoras */
+.msj{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
 
 .grupos-promotoras{
     margin-top: 20px;
