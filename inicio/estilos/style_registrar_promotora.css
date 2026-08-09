@@ -10,7 +10,6 @@ body{
 }
 .form-registrar{
     margin-top: 20px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgba(236, 199, 164, 0.473);
