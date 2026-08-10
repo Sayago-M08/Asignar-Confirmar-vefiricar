@@ -1,0 +1,17 @@
+<?php
+require_once __DIR__ . '/../config/db.php';
+
+/**
+ * Consulta para obtener todas las promotoras cargadas.
+ * Seleccionamos todos los campos para que tu compañero tenga acceso a 
+ * DNI, nombre, domicilio, etc.
+ */
+$sql_todas_promotoras = "SELECT 
+                            dni_promotoras, 
+                            nombre_completo, 
+                            domiciolio 
+                         FROM promotoras 
+                         ORDER BY nombre_completo ASC";
+
+$res_todas = $conn->query($sql_todas_promotoras);
+?>
