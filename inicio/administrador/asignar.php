@@ -162,77 +162,78 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <?php include '../estilos/nav.html'?>
-    <form action="" method="POST">
+    <form action="" method="POST" >
         <div class="input-principal">
 
         <!-- DATOS GENERALES DEL GRUPO (FIJOS) -->
-        <label for="num">Elije el número del grupo</label>
-        <input type="number" id="num" name="num" placeholder="Ingrese el número del grupo" required>
+         <div class="num-grupo">
+
+             <label for="num">Elije el número del grupo</label>
+             <input type="number" id="num" name="num" placeholder="Ingrese el número del grupo" required>
+             
+         </div>
+         <div class="nombre-grupo">
+            
+             <label for="nom">Nombre del grupo</label>
+             <input type="text" id="nom" name="nom" placeholder="Ingrese el nombre del grupo" required>
+             
+         </div>
         
-        <label for="nom">Nombre del grupo</label>
-        <input type="text" id="nom" name="nom" placeholder="Ingrese el nombre del grupo" required>
-        
-<div class="contenedor-fecha">
-    <h3>Fechas de Trabajo del Grupo</h3>
-    
-    <!-- Contenedor donde se irán sumando los inputs de fecha -->
-    <div id="contenedor-fechas">
-        <div class="fila-fecha" style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-            <input type="date" name="fechas[]" required>
-            <span class="fecha-inicio">(Fecha inicial)</span>
-        </div>
-    </div>
-
-    <!-- Botón para agregar más campos de fecha -->
-     <div class="boton">
-
-         <button type="button" id="btn-agregar-fecha" class="btn-agregar">
-             + Agregar otra fecha
-            </button>
-    </div>
-</div>
-
         <!-- Buscador / Creador de Lugar (Fijo) -->
         <div class="formulario-grupo">
-            <label for="buscador-lugar">Asignar o Crear Lugar:</label>
+            <label for="buscador-lugar">Asignar/Crear Lugar:</label>
             <input 
-                list="lista-lugares" 
-                id="buscador-lugar" 
-                name="nombre_lugar" 
-                placeholder="Escribí para buscar o crear..." 
-                autocomplete="off"
-                required
+            list="lista-lugares" 
+            id="buscador-lugar" 
+            name="nombre_lugar" 
+            placeholder="Escribí para buscar/crear..."  
+            autocomplete="off"
+            required
             >
             <datalist id="lista-lugares">
                 <?php while ($row = $rel_lugar->fetch_assoc()){ ?>
-                    <option value="<?= $row['lugar'] ?>"></option>
+                <option value="<?= $row['lugar'] ?>"></option>
                 <?php } ?>
             </datalist>
         </div>
-
+        
         <!-- Buscador / Creador de Operativos (Fijo) -->
         <div class="formulario-grupo">
-            <label for="buscador-operativo">Asignar o Crear Operativo:</label>
+            <label for="buscador-operativo">Asignar/Crear Operativo:</label>
             <input 
-                list="lista-operativos" 
-                id="buscador-operativo" 
-                name="nombre_operativo" 
-                placeholder="Escribí para buscar o crear..." 
-                autocomplete="off"
-                required
+            list="lista-operativos" 
+            id="buscador-operativo" 
+            name="nombre_operativo" 
+            placeholder="Escribí para buscar/crear..." 
+            autocomplete="off"
+            required
             >
             <datalist id="lista-operativos">
                 <?php while ($row = $rel_operativos->fetch_assoc()){ ?>
-                    <option value="<?= $row['operativos'] ?>"></option>
+                <option value="<?= $row['operativos'] ?>"></option>
                 <?php } ?>
             </datalist>
         </div>
-</div>
-<div class="separador">
-    <!-- SECCIÓN DINÁMICA: PROMOTORAS Y TAREAS -->
-    <h2>Promotoras y Tareas Asignadas</h2>
-
-</div>
+        <div class="contenedor-fecha">
+            <h3>Fechas de Trabajo del Grupo</h3>
+            
+            <!-- Contenedor donde se irán sumando los inputs de fecha -->
+            <div id="contenedor-fechas">
+                <div class="fila-fecha" style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                    <input type="date" name="fechas[]">
+                    <span class="fecha-inicio">(Fecha inicial)</span>
+                </div>
+            </div>
+            
+            <!-- Botón para agregar más campos de fecha -->
+            <div class="boton">
+                
+                <button type="button" id="btn-agregar-fecha" class="btn-agregar">
+                    + Agregar otra fecha
+                </button>
+            </div>
+        </div>
+    </div>
 
 
 <div class="segundos-input">
@@ -249,7 +250,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input 
                         list="promotoras" 
                         name="promotora[]" 
-                        placeholder="Escribí para buscar..." 
+                       placeholder="Escribí para buscar/crear..." 
                         autocomplete="off"
                         required
                     >
@@ -257,11 +258,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <!-- 2. Buscador / Creador de Tareas -->
                 <div class="formulario-grupo">
-                    <label>Asignar o Crear Tarea:</label>
+                    <label>Asignar/Crear Tarea:</label>
                     <input 
                         list="lista-tareas" 
                         name="nombre_tarea[]" 
-                        placeholder="Escribí para buscar o crear..." 
+                        placeholder="Escribí para buscar/crear..." 
                         autocomplete="off"
                         required
                     >
@@ -277,7 +278,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </button>
 
         <br>
-        <input type="submit" value="Enviar" class="enviar">
+        <div class="btn-enviar">
+
+            <input type="submit" value="Enviar" class="enviar">
+        </div>
     </form>
 
     <!-- Datalists globales para las opciones dinámicas -->

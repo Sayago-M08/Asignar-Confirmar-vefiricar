@@ -1,149 +1,157 @@
- body{
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle at 50% 100%,rgb(2, 32, 88),rgba(155, 80, 9, 0.349)70%, rgb(2, 32, 88));
+    min-height: 100vh;
+    background: radial-gradient(circle at top right, #1e3a5f, #0f1e3f, #0b132b);
     background-repeat: no-repeat;
     display: grid;
-    grid-template-columns:250px 1fr;    
-    color: #ccc;
-
+    grid-template-columns: 250px 1fr;
+    color: #e2e8f0;
 }
-form{
-    margin-top: 20px;
 
-}
-.input-principal{
-    background-color: rgba(64, 65, 68, 0.473);
-    border-radius: 20px;
-    backdrop-filter: blur(50px);
+/* Envoltorio principal */
+form {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    color: #ffffff;
-}
-input{
-    padding: 12px;
-    width: 300px;
-    border: 2px solid gray;
-    border-radius: 20px;
-    margin-bottom: 10px;
-        box-shadow: -3px -3px 5px rgba(226, 226, 226, 0.589),
-                5px 5px 10px black,
-    inset 0 0 10px gray;
-    transition: all 1000ms ease;
-}
-input::placeholder{
-    color: black;
-    font-size: 1rem;
-}
-input:focus{
-    outline: none;
-    color: black;
-            box-shadow:
-            inset 0 0 30px gray;
-}
-.boton{
-        display: flex;
-    justify-content: center;
-}
-.btn-agregar{
-    margin-top: 10px; 
-    padding: 15px 15px;
-    font-size: 17px;
-    cursor: pointer; 
-    background-color: #03094298;
-    box-shadow: -5px -5px 10px rgba(112, 111, 111, 0.589),
-                5px 5px 20px black,
-                inset 0 0 20px gray;
-    color: rgb(255, 255, 255); 
-    border: none;
-    border-radius: 20px;
-    transition: all 1000ms ease;
-}
-.btn-agregar:hover{
-    transform: scale(1.1);
-        box-shadow: -5px -5px 20px rgba(226, 226, 226, 0.589),
-                5px 5px 30px black,
-                inset 0 0 30px gray;
-}
-.contenedor-fecha{
-    background-color: rgb(2, 32, 88);
-    padding: 10px;
-    border-radius: 20px;
-    color: aliceblue;
-    margin-bottom: 10px;
-}
-.contenedor-fecha input:focus{
-    border: none;
-    outline: none;
-    border: 4px solid gray;
-}
-.fecha-inicio{
-    color: gray;
-}
-/* separador de los dos input */
-.separador{
-    color: #ffffff;
-    font-size: 26px;
-    text-align: center;
-    border: 2px solid rgb(172, 172, 172);
-    margin-bottom: 20px;
-    margin-top: 20px ;
-    border-radius: 20px;
-    backdrop-filter: blur(30px);
-}
-
-
-/* segundo input */
-.contenedor-secundario{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     gap: 20px;
 }
 
+/* --- BLOQUES DEL FORMULARIO --- */
+.input-principal,
+.segundos-input,
+.bloque-asignacion {
+    width: 100%;
+    background: rgba(17, 31, 61, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
 
+.input-principal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
 
-.segundos-input{
-        background-color: rgba(64, 65, 68, 0.473);
-    border-radius: 20px;
-    backdrop-filter: blur(50px);
+.contenedor-secundario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.bloque-asignacion h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* --- INPUTS Y LABELS --- */
+.formulario-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    background: rgba(8, 15, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    outline: none;
+    box-shadow: none;
+    transition: all 200ms ease;
+}
+
+input::placeholder {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* --- CONTENEDOR DE FECHAS --- */
+.contenedor-fecha {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    color: #ffffff;
-    margin-bottom: 20px;
+    background: rgba(8, 15, 30, 0.4);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    width: 100%;
 }
-.bloque-asignacion{
-    background-color: rgb(2, 32, 88);
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+
+.fecha-inicio {
+    color: #e2e8f0;
+    font-size: 0.9rem;
 }
-.bloque-asignacion h3{
-    font-size: 2rem;
+
+.contenedor-fecha input:focus {
+    border-color: #38bdf8;
 }
-.enviar{
-    background-color: rgb(2, 46, 75);
-    color: white;
-    border-radius: 10px;
+
+/* --- BOTONES --- */
+.boton, .btn-enviar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-agregar, .enviar {
     margin-top: 20px;
-    font-size: 1.2rem;
-    transition: all 1000ms ease;
-}
-.enviar:hover{
-    transform: scale(1.1);
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
+    background-color: #0284c7;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    transition: all 200ms ease;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
 }
-/* Estilos del formulario */
-.formulario-grupo {
-    margin-bottom: 15px;
-    font-family: sans-serif;
+
+.btn-agregar:hover, .enviar:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
 }
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+
+.btn-agregar:active, .enviar:active {
+    transform: translateY(0);
 }

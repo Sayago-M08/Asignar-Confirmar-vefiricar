@@ -49,40 +49,25 @@ if (isset($_POST['id_grupo'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="../estilos/principal.css">
+        <link rel="stylesheet" href="../estilos/grupos.css">
         <link rel="stylesheet" href="../estilos/nav.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <?php include '../estilos/nav.html'?>
 
-    <main class="conexion">
-        <div class="contenedor">
-            <h2>Conexion a la base de datos</h2>
-        </div>
-        <div class="mensaje-carga">
-            <h1>Para cargar un nuevo grupo aprete el boton</h1>
-        </div>
-        <div class="botones">
-            <button class="agregar" id="btn-agregar"><a href="./asignar.php">Asignar nuevo grupo</a></button> 
+    <main class="contenedor">
+        <div class="titulo">
+
+            <div class="mensaje-carga">
+                <h1>Para cargar un nuevo grupo aprete el boton</h1>
+            </div>
+            <div class="botones">
+                <button class="agregar" id="btn-agregar"><a href="./asignar.php">Asignar nuevo grupo</a></button> 
+            </div>
         </div>
         <div class="formulario">
             <h2>Agregar grupo</h2>
-            <form action="">
-                <label for="">datos</label>
-                <br>
-                <input type="text" placeholder="dwadawd">
-                <br>                <label for="">datos</label>
-                <br>
-                <input type="text" placeholder="dwadawd">
-                <br>                <label for="">datos</label>
-                <br>
-                <input type="text" placeholder="dwadawd">
-                <br>                <label for="">datos</label>
-                <br>
-                <input type="text" placeholder="dwadawd">
-                <br>
-            </form>
         </div>
             <div class="prom-cargada">
             <h1>📜 Historial Grupos de promotoras</h1>

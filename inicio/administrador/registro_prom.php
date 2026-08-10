@@ -13,16 +13,13 @@ require_once '../configuracion/db.php';
 <body>
         <?php include '../estilos/nav.html'?>
     <main class="conexion">
-        <div class="contenedor">
-            <h2>Conexion a la base de datos</h2>
-        </div>
             <div class="prom-cargada">
             <h1>Promotoras en el sistema</h1>
         </div>
         <div class="buscador">
             <form action="" method="POST">
                 <div class="form-input">
-                    <input type="text" name="busqueda" placeholder="domicilio" class="texto">
+                    <input type="text" name="busqueda" placeholder="Ingrese un dato para buscar..." class="texto">
                     <input type="submit" name="enviar" value="Buscar" class="boton">
                 </div>
             </form>
@@ -44,7 +41,7 @@ require_once '../configuracion/db.php';
                 <div class="botones">
                 <button class="actualizar">Actualizar</button> <button class="eliminar">Eliminar</button>
                 </div>
-            </div>
+        </div>
             <?php
                 }
             }else{

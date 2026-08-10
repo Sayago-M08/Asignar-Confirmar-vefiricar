@@ -29,16 +29,13 @@ $promo= $conn->query($sql_promotoras);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="../estilos/principal.css">
+        <link rel="stylesheet" href="../estilos/citados.css">
         <link rel="stylesheet" href="../estilos/nav.css">
 </head>
 <body>
     <?php include '../estilos/nav.html'?>
 
     <main class="conexion">
-        <div class="contenedor">
-            <h2>Conexion a la base de datos</h2>
-        </div>
             <div class="prom-cargada">
             <h1>Promotoras Citados Hoy <?= $hoy  ?></h1>
             </div>
@@ -52,7 +49,6 @@ $promo= $conn->query($sql_promotoras);
                 <h2>Nombre: <?=  $resultado['nombre_completo'] ?></h2>
                 <h2>Domicilio: <?=  $resultado['domicilio'] ?></h2>
                 <h2>Barrio: <?=  $resultado['barrio'] ?> </h2>
-                <button class="confirmar">Confirmar asistencia</button>
             </div>
             <?php }} else{
                 echo "<p class='msj'>No hay promotoras para hoy.</p>";
@@ -65,9 +61,8 @@ $promo= $conn->query($sql_promotoras);
             <?php
                 if ($res && $res->num_rows > 0) {?>
 
-<div class="grupo-promotoras">
-                <table>
-
+            <div class="promotoras-grupos">
+                <table class="promotoras-datos">
             <tr>
                 <th>nombre</th>
                 <th>Equipo</th>

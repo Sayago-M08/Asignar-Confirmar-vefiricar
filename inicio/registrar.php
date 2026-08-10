@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dni = intval($_POST['dni_promotoras']); // Recibimos el DNI manualmente
     $nombre = $_POST['nombre'];
     $domicilio = $_POST['domicilio'];
-    $barrio = $_post['barrio'];
+    $barrio = $_POST['barrio'];
     $pass_plana = $_POST['contraseña'];
 
     //verificacion
@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mensaje = "<span class='msj_error'>Promotora ya registrada</span>";
     }else{
         // Insertamos incluyendo el DNI
-        $stmt = $conn->prepare("INSERT INTO promotoras (dni_promotoras, nombre_completo, domicilio,barrio contraseña) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("isss", $dni, $nombre, $domicilio, $barrio, $pass_plana);
+        $stmt = $conn->prepare("INSERT INTO promotoras (dni_promotoras, nombre_completo, domicilio, barrio, contraseña) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("isssi", $dni, $nombre, $domicilio, $barrio, $pass_plana);
         if ($stmt->execute()) {
             $mensaje = "Promotora registrada correctamente.";
         } else {
