@@ -1,6 +1,10 @@
 <?php
+require_once 'verificador.php';
 require_once '../configuracion/db.php';
-$sql = "SELECT * FROM grupos";
+$sql = "SELECT g.*,o.*,l.* FROM grupos g
+INNER JOIN operaivos o ON g.id_operativo = o.id_operativos
+INNER JOIN lugar l ON g.id_lugar = l.id_lugar
+";
 
 $resultado = $conn->query($sql);
 ?>
@@ -15,15 +19,12 @@ $resultado = $conn->query($sql);
     <link rel="stylesheet">
     <link rel="stylesheet" href="../estilos/nav.css">
     <link rel="stylesheet" href="../estilos/calendario.css">
-    <!-- FullCalendar v6 -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
-    <!-- Carga de FullCalendar en español -->
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.10/locales/es.global.min.js"></script>
 </head>
 <body>
     <?php include '../estilos/nav.html'?>
     <div id="calendar-container" >
-        <!-- LEYENDA EXPLICATIVA DEL SEMÁFORO -->
         <div class="leyenda-semaforo">
             <div class="titulo">
                 <h4>Referencia de Colores:</h4>
@@ -52,8 +53,8 @@ $resultado = $conn->query($sql);
             </li>
             <div class="datos">
                 <span><?= $row['numero_grupo']?></span>
-                <span><?= $row['id_operativo']?></span>
-                <span><?= $row['id_lugar']?></span>
+                <span><?= $row['operativos']?></span>
+                <span><?= $row['lugar']?></span>
             </div>
 
                 <?php }?>

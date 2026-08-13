@@ -23,8 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['rol'] = 'promotora';
             $_SESSION['dni_promotoras'] = $promotora['dni_promotoras'];
             $_SESSION['nombre'] = $promotora['nombre'];
+            $_SESSION['logueado']   = true;
             
-            header("Location: panel_promotora.php");
+            header("Location:./inicio-promotoras/iniciado/panel.php");
             exit();
         } else {
             $mensaje = "<span class='mersaje_error' style='color:red;'>La contraseña es incorrecta.</span>";
@@ -44,8 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['rol'] = 'admin';
                 $_SESSION['dni_admin'] = $admin['dni_admin'];
                 $_SESSION['nombre'] = $admin['nombre'];
+                $_SESSION['logueado']   = true;
                 
-                header("Location:../administrador/prueba 1/index.html");
+                header("Location:./administrador/calendario.php");
                 exit();
             } else {
                 $mensaje = "<span class='mersaje_error' style='color:red;'>La contraseña es incorrecta.</span>";

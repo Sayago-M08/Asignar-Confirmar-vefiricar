@@ -17,8 +17,10 @@ body {
 /* panel lateral de los grupos */
 .grupos{
     width: 200px;
-     border: 1px solid #4b4d4e8e;
-    height: auto;
+    border: 1px solid #4b4d4e8e;
+    height: 545px;
+    overflow: hidden;
+    overflow-y: auto;
     border-radius: 7px;
     text-align: center;
     padding: 10px;
@@ -55,7 +57,36 @@ body {
     visibility: hidden;
     transform: translateY(6px);
     transition: all 200ms ease;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
 }
+.datos span{
+    background-color: #0369a1;
+    border-radius: 10px;
+    padding: 5px;
+}
+.datos span:nth-child(3){
+grid-column: 1/3;
+}
+.grupos::-webkit-scrollbar {
+    width: 6px;
+}
+
+.grupos::-webkit-scrollbar-track {
+    background: rgba(2, 2, 2, 0.2);
+    border-radius: 10px;
+}
+
+.grupos::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.grupos::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
 .promotoras-datos:hover{
     background-color: #0b132b; 
     border: 1px solid #0369a1;
@@ -74,9 +105,9 @@ body {
 }
 #calendar-container {
     max-width: 1000px;
-    max-height: 650px;
     overflow: hidden;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: -5px 5px 10px rgba(0,0,0,0.4);

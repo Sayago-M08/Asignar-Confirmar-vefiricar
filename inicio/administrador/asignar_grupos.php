@@ -1,4 +1,5 @@
 <?php
+require_once 'verificador.php';
 require_once '../configuracion/db.php';
 $mensaje = "";
 // Verificamos que venga el ID del grupo a eliminar

@@ -16,12 +16,17 @@ body {
 
 
 /* --- GRILLA DE PROMOTORAS --- */
+.datos-asistencias{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
 .promotoras {
-    width: 100%;
-    max-width: 1000px;
-    height: 520px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: auto;
     gap: 20px;
     padding: 20px;
     background: rgba(17, 31, 61, 0.4);
@@ -64,7 +69,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     transition: all 500ms ease;
 }
 
@@ -79,10 +83,13 @@ body {
     color: #38bdf8;
     margin-bottom: 10px;
 }
+.promotoras-datos h2:nth-child(5){
+    color: #38bdf8;
+}
 /* tabla de las promotoras */
 
 .promotoras-grupos {
-    width: 100%;
+    width: 1000px;
     max-width: 950px;
     overflow-x: auto;
     background-color: rgba(17, 31, 61, 0.75);
@@ -91,6 +98,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     padding: 15px;
+    margin-bottom: 20px;
 }
 
 table {

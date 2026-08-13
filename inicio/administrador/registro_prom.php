@@ -1,4 +1,5 @@
 <?php
+require_once 'verificador.php';
 require_once '../configuracion/db.php';
 ?>
 <!DOCTYPE html>
