@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top right, #1e3a5f, #0f1e3f, #0b132b);
+    color: #ffffff;
+}
+
+.contenedor{
+    height: 100vh;
+}
+.contenido{
+
+    margin: 20px;
+    width: 100%;
+    max-width: 380px;
+    background: rgba(17, 31, 61, 0.65);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 30px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+.boton{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.boton-olvidar{
+    background: transparent;
+    border: none;
+    transition: all 2000ms ease;
+    color: aliceblue;
+}
+
+.col label{
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.input-dato{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.input-dato:hover{
+    box-shadow: 1px 1px 3px 1px rgb(255, 255, 255);
+}
+form{
+    padding-top: 50px;
+}
+form h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+}
+.boton-input{
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 10px;
+    width: 100px;
+    transition: all 1000ms ease;
+    height: 40px;
+    box-shadow: 1px 1px 6px 1px rgba(67, 68, 68, 0.308);
+}
+.boton-input:hover{
+    box-shadow: 2px 2px 10px 3px rgba(67, 68, 68, 0.308);
+    background-color: rgba(240, 248, 255, 0.445);
+    color: black;
+}
+.alerta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.mersaje_error{
+    position: relative;
+    font-size: 20px;
+    color: rgba(212, 76, 76, 0.877);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgba(240, 248, 255, 0.4);
+}
