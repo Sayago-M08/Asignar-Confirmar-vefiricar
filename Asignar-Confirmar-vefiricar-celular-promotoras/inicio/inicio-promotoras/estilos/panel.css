@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top right, #1e3a5f, #0f1e3f, #0b132b);
+    color: #ffffff;
+}
+/* grupos */
+.grupo{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin: 20px;
+        background-color: #0f1e3fcc;
+    box-shadow: 0 0 10px #193269;
+}
+/* Logo del fondo de la matanza */
+.fondo-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+.fondo{
+    height: 300px;
+    width: 300px;
+    z-index: -1111;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    backdrop-filter: blur(50px);
+}
+
+/* cuerpo principal */
+/* Fechas citadas */
+.fecha{
+    background-color: #0f1e3fcc;
+    box-shadow: 0 0 10px #193269;
+    margin: 50px 20px 50px 20px;
+    border-radius: 10px;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fecha h1{
+    color: #0284c7;
+}
+.fechas ul{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 20px;
+}
+.fechas ul li{
+    text-align: center;
+    background-color: #1e3a5f70;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #0284c7;
+    padding: 5px;
+}
+/* Tareas a realizar */
+.tareas{
+    margin: 50px 20px 50px 20px;
+    border-radius: 10px;
+    padding:10px;
+    background-color: #0f1e3fcc;
+    box-shadow: 0 0 10px #193269;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tareas h2{
+    font-size: 2rem;
+    color: #0284c7;
+}
+.tareas ul{
+    place-items: center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 10px;
+}
+.tareas ul li{
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #0284c7;
+    padding: 5px;
+    font-size: 1.1rem;
+}
+/* Fecha del dia */
+.fecha-dia{
+    margin: 50px 20px 50px 20px;
+    border-radius: 10px;
+    padding:10px;
+        background-color: #0f1e3fcc;
+    box-shadow: 0 0 10px #193269;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fecha-dia h2{
+    font-size: 2rem;
+    color: #0284c7;
+}
+/* Botones de la fecha del dia */
+.botones{
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+}
+.botones button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px black;
+    background-color: green;
+    color: white;
+    transition: all 500ms ease;
+    font-size: 1.5rem;
+}
+.botones button:hover{
+    box-shadow: 0 0 20px green;
+    transform: translateY(-10px);
+    cursor: pointer;
+}

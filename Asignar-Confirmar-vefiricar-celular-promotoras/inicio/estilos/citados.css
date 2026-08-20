@@ -14,7 +14,14 @@ body {
     color: #ffffff;
 }
 
-
+/* cuerpo principal */
+.conexion{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    margin-right:100px;
+}
 /* --- GRILLA DE PROMOTORAS --- */
 .datos-asistencias{
     width: 900px;
@@ -24,6 +31,7 @@ body {
     gap: 20px;
 }
 .promotoras {
+    height:300px;
     display: grid;
     grid-template-columns: repeat(2, 180px);
     grid-template-rows: auto;
@@ -70,6 +78,7 @@ body {
     flex-direction: column;
     align-items: center;
     transition: all 500ms ease;
+    height:auto;
 }
 
 .promotoras-datos:hover {
@@ -83,7 +92,10 @@ body {
     color: #38bdf8;
     margin-bottom: 10px;
 }
-.promotoras-datos h2:nth-child(5){
+.promotoras-datos h2{
+    font-size:1rem;
+}
+.promotoras-datos h2:nth-child(4){
     color: #38bdf8;
 }
 /* tabla de las promotoras */
